@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     root to: "dashboards#show"
   end
 
-  resource :shouts, only: [:create]
+  resource :shouts, only: [:create, :show]
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, only: [:create]
 
